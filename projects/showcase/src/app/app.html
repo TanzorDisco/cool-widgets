@@ -1,0 +1,33 @@
+<main class="showcase-shell">
+  <section class="hero" aria-labelledby="showcase-title">
+    <div class="hero__copy">
+      <p class="eyebrow">Cool Widgets · Motion Lab</p>
+      <h1 id="showcase-title">Интерфейсы<br />с характером.</h1>
+      <p class="lede">
+        Песочница для живых Angular-компонентов, построенных на Material и GSAP.
+      </p>
+
+      <button
+        matButton="filled"
+        type="button"
+        data-testid="motion-trigger"
+        (click)="playAnimation()"
+      >
+        Запустить анимацию
+      </button>
+    </div>
+
+    <div class="stage" aria-label="Демонстрация анимации">
+      <div #motionTarget class="motion-card" data-testid="motion-target">
+        <span class="motion-card__spark" aria-hidden="true">✦</span>
+        <p>Material foundation</p>
+        <strong>GSAP energy</strong>
+        <span class="motion-card__tag">v0.1 playground</span>
+      </div>
+      <span class="orbit orbit--one" aria-hidden="true"></span>
+      <span class="orbit orbit--two" aria-hidden="true"></span>
+    </div>
+  </section>
+
+  <router-outlet />
+</main>

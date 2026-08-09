@@ -1,0 +1,45 @@
+@use '@fontsource-variable/roboto';
+@use '@angular/material' as mat;
+
+:root {
+  @include mat.theme((
+    color: (
+      primary: mat.$violet-palette,
+      tertiary: mat.$orange-palette,
+    ),
+    typography: 'Roboto Variable',
+    density: 0,
+  ));
+
+  --cw-accent: #7136ed;
+  --cw-accent-soft: #eee7ff;
+  --cw-surface: #f7f5fb;
+  --cw-ink: #191522;
+  --cw-muted: #696274;
+  color-scheme: light;
+  font-family: 'Roboto Variable', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  color: var(--cw-ink);
+  background:
+    radial-gradient(circle at 78% 18%, rgb(220 203 255 / 58%), transparent 34rem),
+    var(--cw-surface);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
